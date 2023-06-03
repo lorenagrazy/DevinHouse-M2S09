@@ -1,0 +1,12 @@
+Sim, concordo.
+Ao aplicar os atributos Data Annotations, é possível garantir que os dados enviados para o banco de dados estejam em conformidade com as regras estabelecidas. Isso evita a persistência de dados inválidos ou inconsistentes, melhorando a integridade dos dados armazenados.
+
+Além de validar os dados, os atributos Data Annotations também podem ser usados para fornecer outras salvaguardas, como:
+
+Controle de Formato: Os atributos podem especificar o formato esperado dos dados, como data, hora, número, e-mail, etc. Isso ajuda a garantir que os dados estejam corretamente formatados antes de serem armazenados.
+
+Restrições de Tamanho: Os atributos podem definir limites para o tamanho dos dados, como comprimento máximo de strings. Isso ajuda a evitar problemas de estouro de campo ou estouro de memória.
+
+Validação Personalizada: Os atributos podem ser personalizados para aplicar regras de validação específicas da aplicação. Isso permite que as regras de negócio sejam implementadas e validadas durante o processo de envio dos dados para o banco de dados.
+
+Melhor Experiência do Usuário: Ao aplicar as validações nos atributos Data Annotations, é possível fornecer feedback imediato ao usuário sobre erros ou dados inválidos. Isso melhora a experiência do usuário, evitando que dados inválidos sejam submetidos e fornecendo mensagens de erro claras e informativas.

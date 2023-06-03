@@ -1,0 +1,1 @@
+O versionamento de API é uma prática comum em projetos de desenvolvimento de software, especialmente quando se trata de APIs públicas ou compartilhadas com clientes e usuários externos. Ele tem como objetivo fornecer uma maneira de evoluir a API ao longo do tempo, sem quebrar a compatibilidade com os consumidores existentes.

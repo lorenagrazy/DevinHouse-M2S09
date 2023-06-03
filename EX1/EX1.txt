@@ -1,0 +1,15 @@
+Arquitetura Cliente-Servidor: O sistema é dividido em cliente e servidor, separando as responsabilidades e permitindo uma maior escalabilidade.
+-------------------------------------------------------------------------------------------------------------------------
+Sem Estado (Stateless): Cada solicitação do cliente contém todas as informações necessárias para ser compreendida e processada pelo servidor. Não há necessidade de o servidor manter o estado do cliente entre as solicitações.
+-------------------------------------------------------------------------------------------------------------------------
+Cache: As respostas do servidor podem ser armazenadas em cache temporariamente no cliente, melhorando a eficiência e reduzindo a carga no servidor.
+-------------------------------------------------------------------------------------------------------------------------
+Interface Uniforme: O REST define uma interface consistente entre o cliente e o servidor, com quatro restrições:
+-------------------------------------------------------------------------------------------------------------------------
+Identificação de recursos: Cada recurso é identificado por um URI (Uniform Resource Identifier) único.
+Manipulação de recursos através de representações: As representações, como JSON ou XML, são utilizadas para transmitir e manipular os recursos.
+Mensagens autoexplicativas: As mensagens enviadas entre cliente e servidor contêm informações suficientes para serem compreendidas.
+Hipermídia como o mecanismo do estado da aplicação (HATEOAS): O servidor envia links junto com as respostas para permitir a descoberta e navegação pelos recursos relacionados.
+Sistema em camadas: O sistema pode ser composto por várias camadas intermediárias que fornecem serviços adicionais, como cache ou segurança.
+--------------------------------------------------------------------------------------------------------------------------
+Código sob demanda (opcional): O servidor pode enviar código executável para o cliente, permitindo a extensão da funcionalidade do cliente. Essa restrição é opcional e nem sempre é utilizada em APIs REST.

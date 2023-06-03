@@ -1,0 +1,42 @@
+O protocolo Status Code é uma parte fundamental do protocolo HTTP (Hypertext Transfer Protocol) que é utilizado para comunicação entre clientes e servidores na web. O Status Code é uma resposta numérica de três dígitos enviada pelo servidor para indicar o resultado de uma solicitação HTTP.
+
+Os códigos de status são divididos em cinco categorias principais:
+
+Códigos de Informação (Informational): São códigos na faixa de 100 a 199 e são usados para fornecer informações adicionais sobre o processamento da solicitação. Um exemplo comum é o código 100 (Continue), que indica que o servidor recebeu a solicitação inicial e o cliente pode continuar enviando o restante dos dados.
+
+Códigos de Sucesso (Success): São códigos na faixa de 200 a 299 e indicam que a solicitação do cliente foi recebida e processada com sucesso pelo servidor. O código mais comum é o 200 (OK), que indica que a solicitação foi bem-sucedida e o servidor está retornando uma resposta válida.
+
+Códigos de Redirecionamento (Redirection): São códigos na faixa de 300 a 399 e são usados para redirecionar o cliente para uma nova localização ou fornecer informações adicionais sobre o recurso solicitado. Um exemplo é o código 301 (Moved Permanently), que indica que o recurso foi movido permanentemente para uma nova URL.
+
+Códigos de Erro do Cliente (Client Error): São códigos na faixa de 400 a 499 e indicam que ocorreu um erro na solicitação enviada pelo cliente. O código mais conhecido é o 404 (Not Found), que indica que o recurso solicitado não foi encontrado no servidor.
+
+Códigos de Erro do Servidor (Server Error): São códigos na faixa de 500 a 599 e indicam que ocorreu um erro no servidor durante o processamento da solicitação. O código mais comum é o 500 (Internal Server Error), que indica um erro genérico do servidor.
+
+A configuração do protocolo Status Code em um endpoint da API depende da estrutura e tecnologia utilizada na implementação da API. Aqui está um exemplo de uma configuração básica de Status Code em um endpoint de uma API usando a linguagem C# e o framework ASP.NET Core:
+
+[HttpGet("{id}")]
+public IActionResult Get(int id)
+{
+    var user = _userService.GetUser(id);
+    
+    if (user == null)
+    {
+        return NotFound(); // Retorna o código 404 se o usuário não for encontrado
+    }
+    
+    return Ok(user); // Retorna o código 200 com os dados do usuário
+}
+
+[HttpGet("{id}")]
+public IActionResult Get(int id)
+{
+    var user = _userService.GetUser(id);
+    
+    if (user == null)
+    {
+        return NotFound(); // Retorna o código 404 se o usuário não for encontrado
+    }
+    
+    return Ok(user); // Retorna o código 200 com os dados do usuário
+}
+

@@ -1,0 +1,45 @@
+GET (Obter):
+O método GET é usado para recuperar recursos existentes do servidor. Ele não deve ter efeitos colaterais e é considerado seguro, ou seja, não deve modificar o estado do servidor. Aqui está um exemplo de uma solicitação GET para obter informações de um usuário.
+
+EXEMPLO: GET /api/users/123 HTTP/1.1
+Host: example.com
+
+Nesse exemplo, a solicitação GET é feita para o endpoint "/api/users/123" para recuperar informações do usuário com o ID 123.
+-------------------------------------------------------------------------------------------------------------------------
+POST (Criar):
+O método POST é usado para enviar dados ao servidor para a criação de novos recursos. Ele pode ter efeitos colaterais, como adicionar informações ao banco de dados. Aqui está um exemplo de uma solicitação POST para criar um novo usuário:
+
+EXEMPLO: POST /api/users HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "age": 30
+}
+
+Nesse exemplo, a solicitação POST é feita para o endpoint "/api/users" com os dados do novo usuário no corpo da solicitação em formato JSON.
+-------------------------------------------------------------------------------------------------------------------------
+PUT (Atualizar):
+O método PUT é usado para atualizar recursos existentes no servidor. Ele substitui completamente o recurso com os dados fornecidos na solicitação. Aqui está um exemplo de uma solicitação PUT para atualizar as informações de um usuário:
+
+EXEMPLO: PUT /api/users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "name": "Jane Smith",
+  "email": "jane@example.com",
+  "age": 35
+}
+Nesse exemplo, a solicitação PUT é feita para o endpoint "/api/users/123" com os novos dados do usuário no corpo da solicitação em formato JSON.
+-------------------------------------------------------------------------------------------------------------------------
+DELETE (Excluir):
+O método DELETE é usado para remover um recurso existente do servidor. Ele exclui permanentemente o recurso especificado. Aqui está um exemplo de uma solicitação DELETE para excluir um usuário:
+
+EXEMPLO: DELETE /api/users/123 HTTP/1.1
+Host: example.com
+
+DELETE /api/users/123 HTTP/1.1
+Host: example.com

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DemoFilmesApi</name>
+    </assembly>
+    <members>
+        <member name="M:DemoFilmesApi.Controllers.FilmesController.Get">
+            <summary>
+            Lista mocada de filmes
+            </summary>
+            <returns>Retorna uma lista mocada de filmes</returns>
+            <response code="200">Com a lista de filmes presentes na base de dados</response>
+        </member>
+        <member name="M:DemoFilmesApi.Controllers.FilmesController.Get(System.Int32)">
+            <summary>
+            Recupera um filme no banco de dados usando seu id
+            </summary>
+            <param name="id">Id do filme a ser recuperado no banco</param>
+            <returns>Informações do filme buscado</returns>
+            <response code="200">Caso o id seja existente na base de dados</response>
+            <response code="404">Caso o id seja inexistente na base de dados</response>
+        </member>
+        <member name="M:DemoFilmesApi.Controllers.FilmesController.Post(DemoFilmesApi.Models.Filme)">
+            <summary>
+            Adiciona um filme ao banco de dados
+            </summary>
+            <param name="filme">Objeto com os campos necessários para criação de um filme</param>
+            <returns>Dados do filme cadastrado</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:DemoFilmesApi.Controllers.FilmesController.Put(System.Int32,DemoFilmesApi.Models.Filme)">
+            <summary>
+            Atualiza um filme no banco de dados usando seu id
+            </summary>
+            <param name="id">Id do filme a ser atualizado no banco</param>
+            <param name="filme">Objeto com os campos necessários para atualização de um filme</param>
+            <returns>Sem conteúdo de retorno</returns>
+            <response code="204">Caso o id seja existente na base de dados e o filme tenha sido atualizado</response>
+            <response code="404">Caso o id seja inexistente na base de dados</response>
+        </member>
+        <member name="M:DemoFilmesApi.Controllers.FilmesController.Delete(System.Int32)">
+            <summary>
+            Deleta um filme usando seu id
+            </summary>
+            <param name="id">Id do filme a ser removido da base de dados</param>
+            <returns>Sem conteúdo de retorno</returns>
+            <response code="204">Caso o id seja existente na base de dados e o filme tenha sido removido</response>
+            <response code="404">Caso o id seja inexistente na base de dados</response>
+        </member>
+    </members>
+</doc>
